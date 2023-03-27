@@ -1,0 +1,44 @@
+@use "./media" as media;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+  }
+
+  html {
+    font-size: var(--text-default);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  small {
+    font-size: var(--text-sm);
+  }
+
+  @include media.ultrahd {
+    html {
+      font-size: 20px;
+    }
+  }
+}

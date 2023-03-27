@@ -1,0 +1,86 @@
+@use "preloader";
+
+@layer components {
+  .container {
+    max-width: var(--width-container);
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  .AppButton {
+    font-weight: bold;
+    @extend .gradient-border;
+
+    &.--filled {
+      color: #fff;
+      background: var(--accent-gradient);
+    }
+
+    &.--outlined {
+      background: transparent;
+      border: 1px solid transparent;
+      -webkit-border-image: var(--accent-gradient) 1;
+      -o-border-image: var(--accent-gradient) 1;
+      border-image: var(--accent-gradient) 1;
+      text-transform: uppercase;
+
+      span {
+        @extend .gradient-text;
+      }
+
+      &:hover {
+        background: var(--accent-gradient);
+        span {
+          background: #fff;
+          background-clip: text;
+        }
+      }
+    }
+  }
+
+  .gradient-border {
+    border: 1px solid transparent;
+    -webkit-border-image: var(--accent-gradient) 1;
+    -o-border-image: var(--accent-gradient) 1;
+    border-image: var(--accent-gradient) 1;
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      180deg,
+      #bc10d8 0%,
+      rgba(80, 0, 250, 0.93) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-large {
+    font-size: var(--text-large);
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: var(--text-heading-1);
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: var(--text-heading-3);
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-size: var(--text-medium);
+  }
+
+  .section {
+    padding-block: 50px;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

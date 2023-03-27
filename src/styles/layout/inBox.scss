@@ -1,0 +1,65 @@
+@use "../media";
+
+@layer layout {
+  .InBox {
+    ._Content {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+
+    ._ItemCardImage {
+      max-width: 280px;
+    }
+
+    ._CardsTitle {
+      grid-row: 1;
+    }
+
+    ._Title + ._Content {
+      margin-top: 50px;
+    }
+
+    @include media.tablet {
+      ._Content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      ._CardsTitle {
+        grid-column: span 2;
+      }
+    }
+
+    @include media.laptop {
+      text-align: left;
+
+      ._Content {
+        grid-template-columns: repeat(4, 1fr);
+        text-align: left;
+      }
+
+      ._ItemCard {
+        grid-row: auto;
+        &:first-of-type {
+          grid-column: 1 / span 2;
+          grid-row: 1 / span 2;
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          grid-column: 3;
+        }
+      }
+
+      ._CardsTitle {
+        grid-column: 4;
+        grid-row: 1;
+      }
+
+      ._ItemCardImage {
+        max-width: none;
+      }
+    }
+  }
+}

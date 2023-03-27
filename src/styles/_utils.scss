@@ -1,0 +1,39 @@
+@use "media" as media;
+
+@layer utils {
+  .hidden {
+    display: none;
+  }
+
+  .tablet-grid {
+    @include media.tablet {
+      display: grid;
+    }
+  }
+  .tablet-block {
+    @include media.tablet {
+      display: block;
+    }
+  }
+  .tablet-hidden {
+    @include media.tablet {
+      display: none;
+    }
+  }
+
+  .laptop-block {
+    @include media.laptop {
+      display: block;
+    }
+  }
+  .laptop-grid {
+    @include media.laptop {
+      display: grid;
+    }
+  }
+  .laptop-hidden {
+    @include media.laptop {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use "../media" as media;
+
+@layer layout {
+  #heroSection {
+    position: relative;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 1000px;
+
+    .backgroundImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom center;
+      inset: 0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  .Offer {
+    padding-top: 230px;
+
+    &__subheading {
+      margin-top: 10px;
+      font-size: var(--text-heading-2);
+    }
+
+    &__proposition {
+      margin-top: 5px;
+      font-size: var(--text-sm);
+    }
+
+    &__buttonsGroup {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      gap: 0;
+
+      @include media.mobileL {
+        flex-direction: row;
+      }
+    }
+
+    &__button {
+      padding: 20px 80px;
+    }
+
+    &__price {
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    &__small {
+      display: block;
+      margin-top: 10px;
+      font-size: var(--text-sm);
+      text-align: right;
+
+      @include media.tablet {
+        text-align: left;
+      }
+    }
+  }
+}

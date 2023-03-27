@@ -1,0 +1,141 @@
+@use "../media" as media;
+@use "../components";
+
+@layer layout {
+  .Tab {
+    background: none;
+    border: none;
+    font-weight: bold;
+    text-align: left;
+
+    &.active {
+      color: var(--color-text-hover);
+    }
+
+    &.--mobile {
+      border: 1px solid currentColor;
+      width: 100%;
+      padding: 16px;
+      border-radius: 10px;
+
+      & + .ProductFeature {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .TabGroup {
+    display: flex;
+    flex-direction: column;
+
+    .ProductFeature {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    &.active {
+      .Tab {
+        color: var(--color-text-hover);
+      }
+
+      .ProductFeature {
+        max-height: max-content;
+      }
+    }
+  }
+
+  .ProductFeature {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr auto 1fr;
+    overflow: hidden;
+    height: 300px;
+
+    .DescriptionTitle {
+      margin-bottom: 8px;
+    }
+
+    .Image {
+      height: 100%;
+
+      img {
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.--mobile {
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+      justify-items: center;
+      height: auto;
+
+      .Image {
+        height: auto;
+      }
+
+      .line {
+        display: none;
+      }
+    }
+
+    .line {
+      margin-inline: 20px;
+      height: 100%;
+      width: 1px;
+      background-color: var(--color-gray);
+    }
+  }
+
+  .ProductFeatures {
+    margin-top: 50px;
+
+    & + .ProductFeaturesMobile {
+      margin-top: 24px;
+    }
+
+    .InfoGroup {
+      @extend .grid-4;
+      margin-top: 20px;
+    }
+
+    .HeadingsGroup {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+
+    .InfoTitle {
+      max-width: 330px;
+    }
+
+    .TabsGroup {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .FeaturesGroup {
+      grid-column: 2/-1;
+      overflow: hidden;
+      max-height: 300px;
+    }
+
+    .Slider {
+      display: flex;
+      flex-direction: column;
+      transition: translate 300ms ease-out;
+    }
+  }
+
+  .ProductFeaturesMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .TabGroup {
+      text-align: center;
+    }
+  }
+}

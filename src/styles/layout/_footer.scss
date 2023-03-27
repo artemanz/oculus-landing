@@ -1,0 +1,47 @@
+@use "../media";
+
+@layer layout {
+  .AppFooter {
+    padding-block: 30px;
+    border-block: 1px solid var(--color-gray);
+    margin-bottom: 30px;
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    ._Nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    ._FooterLogo {
+      display: none;
+    }
+
+    ._Nav-Links {
+      display: flex;
+      gap: 24px;
+    }
+
+    ._Nav-Link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    ._SocialGroup {
+      display: flex;
+      gap: 20px;
+    }
+
+    @include media.tablet {
+      ._FooterLogo {
+        display: block;
+      }
+    }
+  }
+}

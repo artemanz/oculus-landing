@@ -1,0 +1,57 @@
+@use "@/styles/components";
+@use "@/styles/media" as media;
+
+$custom-bp: 1240px;
+
+@layer layout {
+  .GamesSection {
+    text-align: center;
+    @include media.custom($custom-bp) {
+      text-align: left;
+    }
+
+    .Content {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @include media.custom($custom-bp) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .RightSide {
+      @include media.custom($custom-bp) {
+        grid-column: 2/-1;
+      }
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @include media.tablet {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .Title + .Content {
+      margin-top: 20px;
+      @include media.custom($custom-bp) {
+        margin-top: 50px;
+      }
+    }
+
+    .LeftSide + .RightSide {
+      margin-top: 20px;
+    }
+
+    .ContentTitle + .ContentText {
+      margin-top: 10px;
+    }
+  }
+
+  .GameCard {
+    @extend .gradient-border;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

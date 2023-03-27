@@ -1,0 +1,66 @@
+@use "../media";
+
+@layer layout {
+  .Accessories {
+    ._Grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    ._Accessory {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    ._Accessory-Image {
+      display: flex;
+      justify-content: center;
+    }
+
+    ._Accessory-Title {
+      flex: 1;
+      font-size: var(--text-medium);
+      color: var(--color-text-secondary);
+    }
+
+    ._Accessory-Price {
+      font-weight: bold;
+      color: var(--color-text-secondary);
+    }
+
+    ._Accessory-BuyInfo {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    ._Accessory-Button {
+      padding-block: 10px;
+    }
+
+    ._Title + ._Subtitle {
+      margin-top: 30px;
+    }
+
+    ._Subtitle + ._Grid {
+      margin-top: 30px;
+    }
+
+    @include media.mobileL {
+      ._Grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @include media.laptop {
+      ._Grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

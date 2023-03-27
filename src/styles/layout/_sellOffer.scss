@@ -1,0 +1,58 @@
+@use "../media" as media;
+
+@layer layout {
+  .SellOffer {
+    position: relative;
+    padding-top: 72px;
+
+    ._BgText {
+      font-size: clamp(100px, 24vw, 400px);
+      opacity: 0.1;
+      position: absolute;
+      text-transform: uppercase;
+      z-index: -1;
+      top: 0;
+      left: 50%;
+      translate: -50% 0;
+      font-weight: bold;
+    }
+
+    ._ButtonsGroup {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      @include media.tablet {
+        flex-direction: row;
+      }
+
+      > * {
+        text-transform: uppercase;
+        padding: 20px 100px;
+      }
+    }
+
+    ._Image {
+      display: flex;
+      justify-content: center;
+    }
+
+    ._Price {
+      font-weight: bold;
+    }
+
+    ._Description {
+      display: flex;
+      justify-content: center;
+    }
+
+    ._Image + ._ButtonsGroup {
+      margin-top: 30px;
+    }
+
+    ._ButtonsGroup + ._Description {
+      margin-top: 10px;
+    }
+  }
+}
