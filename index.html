@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oculus</title>
+    <script type="module" crossorigin src="./assets/index-6f105dd6.js"></script>
+    <link rel="stylesheet" href="./assets/index-93336366.css">
+  </head>
+  <body>
+    <header class="Header">
+  <div class="container">
+    <nav class="Header__nav">
+      <ul class="Header__menu">
+        <li class="Header__menuItem"><a href="#inBoxSection">shop</a></li>
+        <li class="Header__menuItem"><a href="#gameSection">games</a></li>
+        <li class="Header__menuItem"><a href="#newsUpdatesSection">news</a></li>
+      </ul>
+      <a class="Header__logo" href="/"
+        ><img src="data:image/png;base64,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" alt="Oculus logo" /></a
+      ><a class="Header__cart" href="#"
+        ><img src="./assets/cart_icon-8917ce6a.svg" alt="Cart" /><span
+          id="cartItemsValue"
+          >1</span
+        ></a
+      >
+    </nav>
+  </div>
+</header>
+
+    <main>
+      <div id="preloader">
+        <div id="loader"></div>
+      </div>
+
+      <section id="heroSection">
+  <img class="backgroundImage" src="./assets/hero-0be16441.jpg" alt="background image" />
+  <div class="container">
+    <div class="Offer">
+      <h1>Meta Quest 2</h1>
+      <p class="Offer__subheading">Get an Elite Strap free</p>
+      <p class="Offer__proposition">
+        For a limited time only, save $59.99 USD. Offer ends 1/19/23
+      </p>
+      <div class="Offer__buttonsGroup">
+        <button class="Offer__button AppButton --filled">BUY NOW</button>
+        <p class="Offer__price gradient-border">399,99 USD</p>
+      </div>
+      <small class="Offer__small">Meta Quest 2 is for ages 13+</small>
+    </div>
+  </div>
+</section>
+
+      <section class="section" id="featuresSection">
+  <div class="container">
+    <div class="ProductFeatures">
+      <div class="HeadingsGroup">
+        <h2 class="Title">PRODUCT FEATURES</h2>
+        <p class="InfoTitle text-large gradient-text">
+          EASY TO SETUP AND SAFE TO USE
+        </p>
+      </div>
+      <div class="InfoGroup laptop-grid hidden">
+        <div class="TabsGroup" data-group="tabs">
+          <button class="Tab active" data-content-id="1">01 Graphics</button>
+          <button class="Tab" data-content-id="2">02 Controls</button>
+          <button class="Tab" data-content-id="3">03 Processor</button>
+          <button class="Tab" data-content-id="4">
+            04 Set up your play area
+          </button>
+          <button class="Tab" data-content-id="5">05 Gardian activity</button>
+          <button class="Tab" data-content-id="6">06 Headset casting</button>
+        </div>
+        <div class="FeaturesGroup">
+          <div class="Slider" data-group="features">
+            <article class="ProductFeature" id="feature-1">
+              <figure class="Image">
+                <img loading="lazy" src="./assets/1-22f6e7ff.jpg" alt="Space" />
+              </figure>
+              <div class="line"></div>
+              <div class="Description">
+                <h4 class="DescriptionTitle">Graphics</h4>
+                <p class="DescriptionText">
+                  With 1832 x 1920 pixels per eye, everything from multiplayer
+                  games and productivity apps to 360 0 videos look beyond
+                  incredible
+                </p>
+                <div class="DescriptionVideo"></div>
+              </div>
+            </article>
+            <article class="ProductFeature" id="feature-2">
+              <figure class="Image">
+                <img loading="lazy" src="./assets/2-9bb165f8.jpg" alt="Space" />
+              </figure>
+              <div class="line"></div>
+              <div class="Description">
+                <h4 class="DescriptionTitle">Controls</h4>
+                <p class="DescriptionText">
+                  More than half of US households now have access to Connected
+                  TV (CTV). It's no surprise that CTV advertising is growing as
+                  well. 1.7 billion CTV ad calls a month in 2017 transformed
+                  into 29.9 billion ad requests in 2018. The growth of
+                  high-speed internet made CTV a reality. The emergence of 5G
+                  technology will only accelerate that growth.
+                </p>
+                <div class="DescriptionVideo"></div>
+              </div>
+            </article>
+            <article class="ProductFeature" id="feature-3">
+              <figure class="Image">
+                <img loading="lazy" src="./assets/3-cbbeaeb9.webp" alt="Space" />
+              </figure>
+              <div class="line"></div>
+              <div class="Description">
+                <h4 class="DescriptionTitle">Processor</h4>
+                <p class="DescriptionText">
+                  Oculus controls are the handheld devices used to interact with
+                  the virtual world in Oculus VR games and experiences. They
+                  offer precise motion tracking and a variety of buttons,
+                  triggers, and joysticks to provide intuitive and immersive
+                  control over in-game actions and movements.
+                </p>
+                <div class="DescriptionVideo"></div>
+              </div>
+            </article>
+            <article class="ProductFeature" id="feature-4">
+              <figure class="Image">
+                <img loading="lazy" src="./assets/4-e90f309a.webp" alt="Space" />
+              </figure>
+              <div class="line"></div>
+              <div class="Description">
+                <h4 class="DescriptionTitle">Set up your play area</h4>
+                <p class="DescriptionText">
+                  The Oculus play area refers to the physical space in which a
+                  user can move and interact with the virtual environment in
+                  their Oculus VR headset. The size of the play area varies
+                  depending on the specific Oculus headset and the tracking
+                  technology used, but generally ranges from a small seated area
+                  to a larger room-scale space.
+                </p>
+                <div class="DescriptionVideo"></div>
+              </div>
+            </article>
+            <article class="ProductFeature" id="feature-5">
+              <figure class="Image">
+                <img loading="lazy" src="./assets/5-f015da32.webp" alt="Space" />
+              </figure>
+              <div class="line"></div>
+              <div class="Description">
+                <h4 class="DescriptionTitle">Gardian activity</h4>
+                <p class="DescriptionText">
+                  Oculus Guardian is a built-in safety feature that helps users
+                  avoid collisions with real-world objects while using their VR
+                  headset. It allows users to map out their play area and set up
+                  virtual boundaries and obstacles that appear in-game when they
+                  approach the physical boundaries of their play area, ensuring
+                  a safe and enjoyable VR experience.
+                </p>
+                <div class="DescriptionVideo"></div>
+              </div>
+            </article>
+            <article class="ProductFeature" id="feature-6">
+              <figure class="Image">
+                <img loading="lazy" src="./assets/6-a60d8912.webp" alt="Space" />
+              </figure>
+              <div class="line"></div>
+              <div class="Description">
+                <h4 class="DescriptionTitle">Headset casting</h4>
+                <p class="DescriptionText">
+                  Oculus headset casting is a feature that allows users to share
+                  their VR experience with others on a nearby smartphone,
+                  tablet, or TV. It provides a real-time view of what the user
+                  is seeing and doing in the VR environment, making it possible
+                  for others to watch and even participate in the experience.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ProductFeaturesMobile laptop-hidden" data-group="mobile-tabs">
+      <div class="TabGroup active" data-selector="tab-group">
+        <button class="Tab --mobile" data-selector="tab-button">
+          01 Graphics
+        </button>
+        <article class="ProductFeature --mobile">
+          <figure class="Image">
+            <img loading="lazy" src="./assets/1-22f6e7ff.jpg" alt="Space" />
+          </figure>
+          <div class="line"></div>
+          <div class="Description">
+            <h4 class="DescriptionTitle">Graphics</h4>
+            <p class="DescriptionText">
+              With 1832 x 1920 pixels per eye, everything from multiplayer games
+              and productivity apps to 360 0 videos look beyond incredible
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="TabGroup" data-selector="tab-group">
+        <button class="Tab --mobile" data-selector="tab-button">
+          02 Controls
+        </button>
+        <article class="ProductFeature --mobile">
+          <figure class="Image">
+            <img loading="lazy" src="./assets/2-9bb165f8.jpg" alt="Space" />
+          </figure>
+          <div class="line"></div>
+          <div class="Description">
+            <h4 class="DescriptionTitle">Controls</h4>
+            <p class="DescriptionText">
+              Oculus controls are the handheld devices used to interact with the
+              virtual world in Oculus VR games and experiences. They offer
+              precise motion tracking and a variety of buttons, triggers, and
+              joysticks to provide intuitive and immersive control over in-game
+              actions and movements.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="TabGroup" data-selector="tab-group">
+        <button class="Tab --mobile" data-selector="tab-button">
+          03 Processor
+        </button>
+        <article class="ProductFeature --mobile">
+          <figure class="Image">
+            <img loading="lazy" src="./assets/3-cbbeaeb9.webp" alt="Space" />
+          </figure>
+          <div class="line"></div>
+          <div class="Description">
+            <h4 class="DescriptionTitle">Processor</h4>
+            <p class="DescriptionText">
+              The Oculus processor is a specialized piece of hardware designed
+              to power the Oculus virtual reality headset. The Oculus processor
+              is optimized for low-latency and high-performance graphics
+              processing, allowing for a seamless and immersive VR experience.
+            </p>
+            <div class="DescriptionVideo"></div>
+          </div>
+        </article>
+      </div>
+      <div class="TabGroup" data-selector="tab-group">
+        <button class="Tab --mobile" data-selector="tab-button">
+          04 Set up your play area
+        </button>
+        <article class="ProductFeature --mobile">
+          <figure class="Image">
+            <img loading="lazy" src="./assets/4-e90f309a.webp" alt="Space" />
+          </figure>
+          <div class="line"></div>
+          <div class="Description">
+            <h4 class="DescriptionTitle">Set up your play area</h4>
+            <p class="DescriptionText">
+              The Oculus play area refers to the physical space in which a user
+              can move and interact with the virtual environment in their Oculus
+              VR headset. The size of the play area varies depending on the
+              specific Oculus headset and the tracking technology used, but
+              generally ranges from a small seated area to a larger room-scale
+              space.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="TabGroup" data-selector="tab-group">
+        <button class="Tab --mobile" data-selector="tab-button">
+          05 Gardian activity
+        </button>
+        <article class="ProductFeature --mobile">
+          <figure class="Image">
+            <img loading="lazy" src="./assets/5-f015da32.webp" alt="Space" />
+          </figure>
+          <div class="line"></div>
+          <div class="Description">
+            <h4 class="DescriptionTitle">Gardian activity</h4>
+            <p class="DescriptionText">
+              Oculus Guardian is a built-in safety feature that helps users
+              avoid collisions with real-world objects while using their VR
+              headset. It allows users to map out their play area and set up
+              virtual boundaries and obstacles that appear in-game when they
+              approach the physical boundaries of their play area, ensuring a
+              safe and enjoyable VR experience.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="TabGroup" data-selector="tab-group">
+        <button class="Tab --mobile" data-selector="tab-button">
+          06 Headset casting
+        </button>
+        <article class="ProductFeature --mobile">
+          <figure class="Image">
+            <img loading="lazy" src="./assets/6-a60d8912.webp" alt="Space" />
+          </figure>
+          <div class="line"></div>
+          <div class="Description">
+            <h4 class="DescriptionTitle">Headset casting</h4>
+            <p class="DescriptionText">
+              Oculus headset casting is a feature that allows users to share
+              their VR experience with others on a nearby smartphone, tablet, or
+              TV. It provides a real-time view of what the user is seeing and
+              doing in the VR environment, making it possible for others to
+              watch and even participate in the experience.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section" id="gameSection">
+  <div class="container">
+    <div class="GamesSection">
+      <h2 class="Title">GAMES</h2>
+
+      <div class="Content">
+        <!-- Left side -->
+        <div class="LeftSide">
+          <p class="ContentTitle gradient-text text-large">
+            It's all fun and games
+          </p>
+          <p class="ContentText">
+            Discover new adventures, master epic challenges or revisit classic
+            moments in your favourite games and experiences
+          </p>
+        </div>
+
+        <!-- Right side -->
+        <div class="RightSide">
+          <article class="GameCard">
+            <figure class="Image">
+              <img
+                loading="lazy"
+                src="./assets/1-7d2626fc.jpg"
+                alt="Blade & Sorcery: Nomad"
+              />
+            </figure>
+            <h4 class="Title">Blade & Sorcery: Nomad</h4>
+            <p class="Text">
+              Step into a medieval fantasy sandbox that uses phisics to serve up
+              some of the most realistic combat in VR
+            </p>
+          </article>
+          <article class="GameCard">
+            <figure class="Image">
+              <img
+                loading="lazy"
+                src="./assets/2-82b19d9a.jpg"
+                alt="Blade & Sorcery: Nomad"
+              />
+            </figure>
+            <h4 class="Title">Population: One</h4>
+            <p class="Text">
+              Climb anything. Fight everywhere. Experience battle royale only
+              possible in VR
+            </p>
+          </article>
+          <article class="GameCard">
+            <figure class="Image">
+              <img
+                loading="lazy"
+                src="./assets/3-ba02ed71.jpg"
+                alt="Blade & Sorcery: Nomad"
+              />
+            </figure>
+            <h4 class="Title">Supernatural</h4>
+            <p class="Text">
+              Box, Flow, Meditate and Stretch with real coaches in stunning
+              destinations from around the world. Enjoy new workouts every day.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="SellOffer" id="sellOfferSection">
+  <div class="container">
+    <p class="_BgText laptop-block hidden gradient-text">oculus</p>
+    <figure class="_Image">
+      <img src="./assets/oculus-0ae57655.png" alt="Oculus" />
+    </figure>
+    <div class="_ButtonsGroup">
+      <button class="AppButton --filled">buy now</button>
+      <p class="_Price gradient-border">399,99 USD</p>
+    </div>
+    <small class="_Description">Meta Quest 2 is for ages 13+</small>
+  </div>
+</section>
+
+      <section class="InBox section" id="inBoxSection">
+  <div class="container">
+    <h2 class="_Title Title">In the box</h2>
+    <div class="_Content">
+      <article class="_ItemCard">
+        <div class="_ItemCardImage">
+          <img src="./assets/1-bae1d6be.jpg" alt="VR Headset" />
+        </div>
+        <p class="_ItemCardDescription">VR Headset</p>
+      </article>
+      <article class="_ItemCard">
+        <div class="_ItemCardImage">
+          <img
+            src="./assets/2-b89454b1.jpg"
+            alt="Two Touch Controllers & AA Batteries"
+          />
+        </div>
+        <p class="_ItemCardDescription">Two Touch Controllers & AA Batteries</p>
+      </article>
+      <article class="_ItemCard">
+        <div class="_ItemCardImage">
+          <img
+            src="./assets/3-902ac496.jpg"
+            alt="Charging Cable & Power Adapter"
+          />
+        </div>
+        <p class="_ItemCardDescription">Charging Cable & Power Adapter</p>
+      </article>
+      <article class="_ItemCard">
+        <div class="_ItemCardImage">
+          <img src="./assets/4-37e78d97.jpg" alt="Glasses Spacer" />
+        </div>
+        <p class="_ItemCardDescription">Glasses Spacer</p>
+      </article>
+      <p class="_CardsTitle gradient-text text-large">What's included</p>
+    </div>
+  </div>
+</section>
+
+      <section class="Accessories" id="accesoriesSection">
+  <div class="container">
+    <h2 class="_Title">ACCESSORIES</h2>
+    <p class="_Subtitle gradient-text text-large">
+      Personalize every experience
+    </p>
+
+    <div class="_Grid">
+      <article class="_Accessory gradient-border">
+        <figure class="_Accessory-Image">
+          <img
+            src="./assets/1-53645885.jpg"
+            alt="Meta Quest 2 Carrying Case"
+          />
+        </figure>
+        <h3 class="_Accessory-Title">Meta Quest 2 Carrying Case</h3>
+        <p class="_Accessory-Description">
+          Protect your system–at home or away.
+        </p>
+        <div class="_Accessory-BuyInfo">
+          <p class="_Accessory-Price">$59.99 USD</p>
+          <button class="_Accessory-Button AppButton --outlined">
+            <span>buy now</span>
+          </button>
+        </div>
+      </article>
+      <article class="_Accessory gradient-border">
+        <figure class="_Accessory-Image">
+          <img
+            src="./assets/2-abdfdb70.jpg"
+            alt="Link Cable
+          "
+          />
+        </figure>
+        <h3 class="_Accessory-Title">Link Cable</h3>
+        <p class="_Accessory-Description">
+          Harness the power of your PC with this premium fiber-optic cable.
+        </p>
+        <div class="_Accessory-BuyInfo">
+          <p class="_Accessory-Price">$79.99 USD</p>
+          <button class="_Accessory-Button AppButton --outlined">
+            <span>buy now</span>
+          </button>
+        </div>
+      </article>
+      <article class="_Accessory gradient-border">
+        <figure class="_Accessory-Image">
+          <img src="./assets/3-b1987864.jpg" alt="Meta Quest 2 Active Pack" />
+        </figure>
+        <h3 class="_Accessory-Title">Meta Quest 2 Active Pack</h3>
+        <p class="_Accessory-Description">
+          A wipeable facial interface, wrist straps, and knuckle straps.
+        </p>
+        <div class="_Accessory-BuyInfo">
+          <p class="_Accessory-Price">$69.99 USD</p>
+          <button class="_Accessory-Button AppButton --outlined">
+            <span>buy now</span>
+          </button>
+        </div>
+      </article>
+      <article class="_Accessory gradient-border">
+        <figure class="_Accessory-Image">
+          <img
+            src="./assets/4-dcf045da.jpg"
+            alt="Meta Quest Gift Cards
+          "
+          />
+        </figure>
+        <h3 class="_Accessory-Title">Meta Quest Gift Cards</h3>
+        <p class="_Accessory-Description">Redeemable on 350+ games and apps.</p>
+        <div class="_Accessory-BuyInfo">
+          <p class="_Accessory-Price">$15.50 USD</p>
+          <button class="_Accessory-Button AppButton --outlined">
+            <span>buy now</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+      <section class="NewsUpdates section" id="newsUpdatesSection">
+  <div class="container">
+    <form class="_Form" id="subscribeForm">
+      <h3 class="_Title text-large">Get news and updates</h3>
+      <div class="_InputGroup">
+        <input class="_Input" type="email" placeholder="Email" id="subscribeEmail"/>
+        <button class="_SubmitButton AppButton --filled" type="submit" disabled>GO</button>
+      </div>
+      <div class="_Group">
+        <p class="_Text">
+          By signing up you agree to receive updates and marketing messages
+          (e.g. email, social, etc.) from Meta about Meta's existing and future
+          products and services. You may withdraw your consent and unsubscribe
+          at any time by clicking the unsubscribe link included in our messages.
+          Your subscription is subject to the Terms and Privacy Policy.
+        </p>
+        <p class="_Mail">oculusshop@gmail.com</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="AppFooter">
+  <div class="container">
+    <nav class="_Nav">
+      <ul class="_Nav-Links">
+        <li class="_Nav-Link">
+          <a href="#inBoxSection">shop</a>
+        </li>
+        <li class="_Nav-Link">
+          <a href="#gameSection">games</a>
+        </li>
+        <li class="_Nav-Link">
+          <a href="#newsUpdatesSection">news</a>
+        </li>
+      </ul>
+
+      <a class="_FooterLogo" href="/"
+        ><img src="data:image/png;base64,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" alt="Oculus logo"
+      /></a>
+
+      <ul class="_SocialGroup">
+        <li class="_SocialLink">
+          <a href="https://youtube.com"
+            ><svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.5047 14.7391L13.9953 13.1016C13.6891 12.9594 13.4375 13.1187 13.4375 13.4578V16.5422C13.4375 16.8813 13.6891 17.0406 13.9953 16.8984L17.5031 15.2609C17.8109 15.1172 17.8109 14.8828 17.5047 14.7391ZM15 0C6.71562 0 0 6.71562 0 15C0 23.2844 6.71562 30 15 30C23.2844 30 30 23.2844 30 15C30 6.71562 23.2844 0 15 0ZM15 21.0938C7.32188 21.0938 7.1875 20.4016 7.1875 15C7.1875 9.59844 7.32188 8.90625 15 8.90625C22.6781 8.90625 22.8125 9.59844 22.8125 15C22.8125 20.4016 22.6781 21.0938 15 21.0938Z"
+                fill="#5C5C5E"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="_SocialLink">
+          <a href="https://facebook.com">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 0C6.7155 0 0 6.75638 0 15.0913C0 22.6234 5.4855 28.8666 12.657 30V19.4527H8.847V15.0913H12.657V11.7667C12.657 7.98481 14.895 5.89617 18.3225 5.89617C19.9635 5.89617 21.6795 6.19045 21.6795 6.19045V9.90291H19.7895C17.925 9.90291 17.3445 11.0665 17.3445 12.2602V15.0913H21.504L20.8395 19.4527H17.3445V30C24.5145 28.8682 30 22.6219 30 15.0913C30 6.75638 23.2845 0 15 0Z"
+                fill="#5C5C5E"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="_SocialLink">
+          <a href="https://instagram.com"
+            ><svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 0C6.66667 0 0 6.66667 0 15C0 23.3333 6.66667 30 15 30C23.3333 30 30 23.3333 30 15C30 6.66667 23.3333 0 15 0ZM15 11.6667C16.8333 11.6667 18.3333 13.1667 18.3333 15C18.3333 16.8333 16.8333 18.3333 15 18.3333C13.1667 18.3333 11.6667 16.8333 11.6667 15C11.6667 13.1667 13.1667 11.6667 15 11.6667ZM19.6667 8.33333C19.6667 7.16667 20.6667 6.33333 21.6667 6.33333C22.6667 6.33333 23.6667 7.33333 23.6667 8.33333C23.6667 9.33333 22.8333 10.3333 21.6667 10.3333C20.5 10.3333 19.6667 9.5 19.6667 8.33333ZM15 26.6667C8.5 26.6667 3.33333 21.5 3.33333 15H8.33333C8.33333 18.6667 11.3333 21.6667 15 21.6667C18.6667 21.6667 21.6667 18.6667 21.6667 15H26.6667C26.6667 21.5 21.5 26.6667 15 26.6667Z"
+                fill="#5C5C5E"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    
+  </body>
+</html>
